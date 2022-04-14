@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Crear una cuenta {% endblock title %}
+
+{% block content %} 
+
+    <h1>Crear Cueta</h1>
+
+    <p>Por favor, registrese usando el siguiente formulario:</p>
+
+    <form method="post">
+        {{ user_form.as_p }}
+
+        {% csrf_token %}
+
+
+        <p><input type="submit" value="Crear cuenta" ></p>
+
+    </form>
+
+
+{% endblock %}
